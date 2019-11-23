@@ -1,0 +1,18 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Contact_CO
+D Switch, single pole double throw
+K switch single-pole double-throw spdt ON-ON
+$ENDCMP
+#
+$CMP Contact_NC
+D Single Pole Single Throw (SPST) switch
+K switch lever
+$ENDCMP
+#
+$CMP Contact_NO
+D Single Pole Single Throw (SPST) switch
+K switch lever
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,809 @@
+EESchema Schematic File Version 4
+LIBS:harwell-cache
+EELAYER 30 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 13600 500  0    50   Input ~ 0
+47
+Text HLabel 13600 700  0    50   Input ~ 0
+54
+Text HLabel 13700 1000 0    50   Input ~ 0
+15
+Text HLabel 13550 1300 0    50   Input ~ 0
+17
+Text HLabel 13500 1650 0    50   Input ~ 0
+18
+Text HLabel 13300 1950 0    50   Input ~ 0
+45
+Text HLabel 13300 2500 0    50   Input ~ 0
+46
+Text HLabel 13800 1450 0    100  Input ~ 0
+49
+$Comp
+L power:+24V #PWR?
+U 1 1 5DCB6336
+P 1150 850
+AR Path="/5DC94B09/5DCB6336" Ref="#PWR?"  Part="1" 
+AR Path="/5DCF32FF/5DCB6336" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1150 700 50  0001 C CNN
+F 1 "+24V" H 1165 1023 50  0000 C CNN
+F 2 "" H 1150 850 50  0001 C CNN
+F 3 "" H 1150 850 50  0001 C CNN
+	1    1150 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DCB633C
+P 1150 1300
+AR Path="/5DC94B09/5DCB633C" Ref="#PWR?"  Part="1" 
+AR Path="/5DCF32FF/5DCB633C" Ref="EXT_0V"  Part="1" 
+F 0 "EXT_0V" H 1150 1050 50  0001 C CNN
+F 1 "GND" H 1155 1127 50  0000 C CNN
+F 2 "" H 1150 1300 50  0001 C CNN
+F 3 "" H 1150 1300 50  0001 C CNN
+	1    1150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5DCB6342
+P 800 850
+AR Path="/5DC94B09/5DCB6342" Ref="#FLG?"  Part="1" 
+AR Path="/5DCF32FF/5DCB6342" Ref="#FLG?"  Part="1" 
+F 0 "#FLG?" H 800 925 50  0001 C CNN
+F 1 "PWR_FLAG" H 800 1023 50  0000 C CNN
+F 2 "" H 800 850 50  0001 C CNN
+F 3 "~" H 800 850 50  0001 C CNN
+	1    800  850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  850  800  900 
+Wire Wire Line
+	800  900  1150 900 
+Wire Wire Line
+	1150 900  1150 850 
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5DCB634B
+P 800 1200
+AR Path="/5DC94B09/5DCB634B" Ref="#FLG?"  Part="1" 
+AR Path="/5DCF32FF/5DCB634B" Ref="#FLG?"  Part="1" 
+F 0 "#FLG?" H 800 1275 50  0001 C CNN
+F 1 "PWR_FLAG" H 800 1373 50  0000 C CNN
+F 2 "" H 800 1200 50  0001 C CNN
+F 3 "~" H 800 1200 50  0001 C CNN
+	1    800  1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  1200 800  1250
+Wire Wire Line
+	1150 1250 1150 1300
+Wire Wire Line
+	800  1250 1150 1250
+$Comp
+L Relay_Partials:Coil_Vertical RLA
+U 1 1 5DCB7128
+P 3200 2450
+F 0 "RLA" H 2900 2400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 2282 100 0001 L CNN
+F 2 "" H 3200 2450 100 0001 C CNN
+F 3 "" H 3200 2450 100 0001 C CNN
+	1    3200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V1
+U 1 1 5DCB77D8
+P 2700 2350
+F 0 "V1" H 2803 2350 50  0000 L CNN
+F 1 "Varistor" H 2803 2305 50  0001 L CNN
+F 2 "" V 2630 2350 50  0001 C CNN
+F 3 "" H 2700 2350 50  0001 C CNN
+	1    2700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R1
+U 1 1 5DCB7D80
+P 2400 2350
+F 0 "R1" H 2470 2350 50  0000 L CNN
+F 1 "R" H 2470 2305 50  0001 L CNN
+F 2 "" V 2330 2350 50  0001 C CNN
+F 3 "" H 2400 2350 50  0001 C CNN
+	1    2400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D1
+U 1 1 5DCB81EB
+P 2400 2700
+F 0 "D1" V 2393 2583 50  0000 R CNN
+F 1 "LED" V 2348 2583 50  0001 R CNN
+F 2 "" H 2400 2700 50  0001 C CNN
+F 3 "" H 2400 2700 50  0001 C CNN
+	1    2400 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 2200 2400 2150
+Wire Wire Line
+	2400 2150 2700 2150
+Wire Wire Line
+	2700 2150 2700 2200
+Wire Wire Line
+	2700 2150 3200 2150
+Wire Wire Line
+	3200 2150 3200 2350
+Connection ~ 2700 2150
+Wire Wire Line
+	2400 2500 2400 2550
+Wire Wire Line
+	3200 2750 3200 2900
+Wire Wire Line
+	3200 2900 2700 2900
+Wire Wire Line
+	2400 2900 2400 2850
+Wire Wire Line
+	2700 2500 2700 2900
+Connection ~ 2700 2900
+Wire Wire Line
+	2700 2900 2400 2900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCBB5D3
+P 3200 2900
+AR Path="/5DC94B09/5DCBB5D3" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCBB5D3" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 2650 50  0001 C CNN
+F 1 "GND" H 3205 2727 50  0000 C CNN
+F 2 "" H 3200 2900 50  0001 C CNN
+F 3 "" H 3200 2900 50  0001 C CNN
+	1    3200 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 2900
+Wire Wire Line
+	2400 2150 850  2150
+Text Label 900  2150 0    49   ~ 0
+ROUGHING_VALVE_CLOSED
+Connection ~ 2400 2150
+Text HLabel 850  2150 0    49   Input ~ 0
+27
+$Comp
+L Relay_Partials:Coil_Vertical RLB
+U 1 1 5DCC8795
+P 3200 3450
+F 0 "RLB" H 2900 3400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 3282 100 0001 L CNN
+F 2 "" H 3200 3450 100 0001 C CNN
+F 3 "" H 3200 3450 100 0001 C CNN
+	1    3200 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V2
+U 1 1 5DCC879B
+P 2700 3350
+F 0 "V2" H 2803 3350 50  0000 L CNN
+F 1 "Varistor" H 2803 3305 50  0001 L CNN
+F 2 "" V 2630 3350 50  0001 C CNN
+F 3 "" H 2700 3350 50  0001 C CNN
+	1    2700 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R2
+U 1 1 5DCC87A1
+P 2400 3350
+F 0 "R2" H 2470 3350 50  0000 L CNN
+F 1 "R" H 2470 3305 50  0001 L CNN
+F 2 "" V 2330 3350 50  0001 C CNN
+F 3 "" H 2400 3350 50  0001 C CNN
+	1    2400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D2
+U 1 1 5DCC87A7
+P 2400 3700
+F 0 "D2" V 2393 3583 50  0000 R CNN
+F 1 "LED" V 2348 3583 50  0001 R CNN
+F 2 "" H 2400 3700 50  0001 C CNN
+F 3 "" H 2400 3700 50  0001 C CNN
+	1    2400 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 3200 2400 3150
+Wire Wire Line
+	2400 3150 2700 3150
+Wire Wire Line
+	2700 3150 2700 3200
+Wire Wire Line
+	2700 3150 3200 3150
+Wire Wire Line
+	3200 3150 3200 3350
+Connection ~ 2700 3150
+Wire Wire Line
+	2400 3500 2400 3550
+Wire Wire Line
+	3200 3750 3200 3900
+Wire Wire Line
+	3200 3900 2700 3900
+Wire Wire Line
+	2400 3900 2400 3850
+Wire Wire Line
+	2700 3500 2700 3900
+Connection ~ 2700 3900
+Wire Wire Line
+	2700 3900 2400 3900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCC87BA
+P 3200 3900
+AR Path="/5DC94B09/5DCC87BA" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCC87BA" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 3650 50  0001 C CNN
+F 1 "GND" H 3205 3727 50  0000 C CNN
+F 2 "" H 3200 3900 50  0001 C CNN
+F 3 "" H 3200 3900 50  0001 C CNN
+	1    3200 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 3900
+Wire Wire Line
+	2400 3150 850  3150
+Text Label 900  3150 0    49   ~ 0
+PUMP_VALVE_CLOSED
+Connection ~ 2400 3150
+Text HLabel 850  3150 0    49   Input ~ 0
+28
+$Comp
+L Relay_Partials:Coil_Vertical RLC
+U 1 1 5DCCEE02
+P 3200 4450
+F 0 "RLC" H 2900 4400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 4282 100 0001 L CNN
+F 2 "" H 3200 4450 100 0001 C CNN
+F 3 "" H 3200 4450 100 0001 C CNN
+	1    3200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V3
+U 1 1 5DCCEE08
+P 2700 4350
+F 0 "V3" H 2803 4350 50  0000 L CNN
+F 1 "Varistor" H 2803 4305 50  0001 L CNN
+F 2 "" V 2630 4350 50  0001 C CNN
+F 3 "" H 2700 4350 50  0001 C CNN
+	1    2700 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5DCCEE0E
+P 2400 4350
+F 0 "R3" H 2470 4350 50  0000 L CNN
+F 1 "R" H 2470 4305 50  0001 L CNN
+F 2 "" V 2330 4350 50  0001 C CNN
+F 3 "" H 2400 4350 50  0001 C CNN
+	1    2400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D3
+U 1 1 5DCCEE14
+P 2400 4700
+F 0 "D3" V 2393 4583 50  0000 R CNN
+F 1 "LED" V 2348 4583 50  0001 R CNN
+F 2 "" H 2400 4700 50  0001 C CNN
+F 3 "" H 2400 4700 50  0001 C CNN
+	1    2400 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 4200 2400 4150
+Wire Wire Line
+	2400 4150 2700 4150
+Wire Wire Line
+	2700 4150 2700 4200
+Wire Wire Line
+	2700 4150 3200 4150
+Wire Wire Line
+	3200 4150 3200 4350
+Connection ~ 2700 4150
+Wire Wire Line
+	2400 4500 2400 4550
+Wire Wire Line
+	3200 4750 3200 4900
+Wire Wire Line
+	3200 4900 2700 4900
+Wire Wire Line
+	2400 4900 2400 4850
+Wire Wire Line
+	2700 4500 2700 4900
+Connection ~ 2700 4900
+Wire Wire Line
+	2700 4900 2400 4900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCCEE27
+P 3200 4900
+AR Path="/5DC94B09/5DCCEE27" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCCEE27" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 4650 50  0001 C CNN
+F 1 "GND" H 3205 4727 50  0000 C CNN
+F 2 "" H 3200 4900 50  0001 C CNN
+F 3 "" H 3200 4900 50  0001 C CNN
+	1    3200 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 4900
+Wire Wire Line
+	2400 4150 850  4150
+Text Label 900  4150 0    49   ~ 0
+HIVAC_VALVE_CLOSED
+Connection ~ 2400 4150
+Text HLabel 850  4150 0    49   Input ~ 0
+29
+$Comp
+L Relay_Partials:Coil_Vertical RLC
+U 1 1 5DCCEE32
+P 3200 5450
+F 0 "RLC" H 2900 5400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 5282 100 0001 L CNN
+F 2 "" H 3200 5450 100 0001 C CNN
+F 3 "" H 3200 5450 100 0001 C CNN
+	1    3200 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V4
+U 1 1 5DCCEE38
+P 2700 5350
+F 0 "V4" H 2803 5350 50  0000 L CNN
+F 1 "Varistor" H 2803 5305 50  0001 L CNN
+F 2 "" V 2630 5350 50  0001 C CNN
+F 3 "" H 2700 5350 50  0001 C CNN
+	1    2700 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R4
+U 1 1 5DCCEE3E
+P 2400 5350
+F 0 "R4" H 2470 5350 50  0000 L CNN
+F 1 "R" H 2470 5305 50  0001 L CNN
+F 2 "" V 2330 5350 50  0001 C CNN
+F 3 "" H 2400 5350 50  0001 C CNN
+	1    2400 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D4
+U 1 1 5DCCEE44
+P 2400 5700
+F 0 "D4" V 2393 5583 50  0000 R CNN
+F 1 "LED" V 2348 5583 50  0001 R CNN
+F 2 "" H 2400 5700 50  0001 C CNN
+F 3 "" H 2400 5700 50  0001 C CNN
+	1    2400 5700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 5200 2400 5150
+Wire Wire Line
+	2400 5150 2700 5150
+Wire Wire Line
+	2700 5150 2700 5200
+Wire Wire Line
+	2700 5150 3200 5150
+Wire Wire Line
+	3200 5150 3200 5350
+Connection ~ 2700 5150
+Wire Wire Line
+	2400 5500 2400 5550
+Wire Wire Line
+	3200 5750 3200 5900
+Wire Wire Line
+	3200 5900 2700 5900
+Wire Wire Line
+	2400 5900 2400 5850
+Wire Wire Line
+	2700 5500 2700 5900
+Connection ~ 2700 5900
+Wire Wire Line
+	2700 5900 2400 5900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCCEE57
+P 3200 5900
+AR Path="/5DC94B09/5DCCEE57" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCCEE57" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 5650 50  0001 C CNN
+F 1 "GND" H 3205 5727 50  0000 C CNN
+F 2 "" H 3200 5900 50  0001 C CNN
+F 3 "" H 3200 5900 50  0001 C CNN
+	1    3200 5900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 5900
+Wire Wire Line
+	2400 5150 850  5150
+Text Label 900  5150 0    49   ~ 0
+VENT_VALVE_CLOSED
+Connection ~ 2400 5150
+Text HLabel 850  5150 0    49   Input ~ 0
+30
+$Comp
+L Relay_Partials:Coil_Vertical RLA?
+U 1 1 5DCEA55D
+P 3200 6450
+F 0 "RLA?" H 2900 6400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 6282 100 0001 L CNN
+F 2 "" H 3200 6450 100 0001 C CNN
+F 3 "" H 3200 6450 100 0001 C CNN
+	1    3200 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V?
+U 1 1 5DCEA563
+P 2700 6350
+F 0 "V?" H 2803 6350 50  0000 L CNN
+F 1 "Varistor" H 2803 6305 50  0001 L CNN
+F 2 "" V 2630 6350 50  0001 C CNN
+F 3 "" H 2700 6350 50  0001 C CNN
+	1    2700 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5DCEA569
+P 2400 6350
+F 0 "R?" H 2470 6350 50  0000 L CNN
+F 1 "R" H 2470 6305 50  0001 L CNN
+F 2 "" V 2330 6350 50  0001 C CNN
+F 3 "" H 2400 6350 50  0001 C CNN
+	1    2400 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D?
+U 1 1 5DCEA56F
+P 2400 6700
+F 0 "D?" V 2393 6583 50  0000 R CNN
+F 1 "LED" V 2348 6583 50  0001 R CNN
+F 2 "" H 2400 6700 50  0001 C CNN
+F 3 "" H 2400 6700 50  0001 C CNN
+	1    2400 6700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 6200 2400 6150
+Wire Wire Line
+	2400 6150 2700 6150
+Wire Wire Line
+	2700 6150 2700 6200
+Wire Wire Line
+	2700 6150 3200 6150
+Wire Wire Line
+	3200 6150 3200 6350
+Connection ~ 2700 6150
+Wire Wire Line
+	2400 6500 2400 6550
+Wire Wire Line
+	3200 6750 3200 6900
+Wire Wire Line
+	3200 6900 2700 6900
+Wire Wire Line
+	2400 6900 2400 6850
+Wire Wire Line
+	2700 6500 2700 6900
+Connection ~ 2700 6900
+Wire Wire Line
+	2700 6900 2400 6900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCEA582
+P 3200 6900
+AR Path="/5DC94B09/5DCEA582" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCEA582" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 6650 50  0001 C CNN
+F 1 "GND" H 3205 6727 50  0000 C CNN
+F 2 "" H 3200 6900 50  0001 C CNN
+F 3 "" H 3200 6900 50  0001 C CNN
+	1    3200 6900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 6900
+Wire Wire Line
+	2400 6150 850  6150
+Text Label 900  6150 0    49   ~ 0
+PUMP_VENT_VALVE_CLOSED
+Connection ~ 2400 6150
+Text HLabel 850  6150 0    49   Input ~ 0
+31
+$Comp
+L Relay_Partials:Coil_Vertical RLB?
+U 1 1 5DCEA58D
+P 3200 7450
+F 0 "RLB?" H 2900 7400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 7282 100 0001 L CNN
+F 2 "" H 3200 7450 100 0001 C CNN
+F 3 "" H 3200 7450 100 0001 C CNN
+	1    3200 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V?
+U 1 1 5DCEA593
+P 2700 7350
+F 0 "V?" H 2803 7350 50  0000 L CNN
+F 1 "Varistor" H 2803 7305 50  0001 L CNN
+F 2 "" V 2630 7350 50  0001 C CNN
+F 3 "" H 2700 7350 50  0001 C CNN
+	1    2700 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5DCEA599
+P 2400 7350
+F 0 "R?" H 2470 7350 50  0000 L CNN
+F 1 "R" H 2470 7305 50  0001 L CNN
+F 2 "" V 2330 7350 50  0001 C CNN
+F 3 "" H 2400 7350 50  0001 C CNN
+	1    2400 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D?
+U 1 1 5DCEA59F
+P 2400 7700
+F 0 "D?" V 2393 7583 50  0000 R CNN
+F 1 "LED" V 2348 7583 50  0001 R CNN
+F 2 "" H 2400 7700 50  0001 C CNN
+F 3 "" H 2400 7700 50  0001 C CNN
+	1    2400 7700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 7200 2400 7150
+Wire Wire Line
+	2400 7150 2700 7150
+Wire Wire Line
+	2700 7150 2700 7200
+Wire Wire Line
+	2700 7150 3200 7150
+Wire Wire Line
+	3200 7150 3200 7350
+Connection ~ 2700 7150
+Wire Wire Line
+	2400 7500 2400 7550
+Wire Wire Line
+	3200 7750 3200 7900
+Wire Wire Line
+	3200 7900 2700 7900
+Wire Wire Line
+	2400 7900 2400 7850
+Wire Wire Line
+	2700 7500 2700 7900
+Connection ~ 2700 7900
+Wire Wire Line
+	2700 7900 2400 7900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCEA5B2
+P 3200 7900
+AR Path="/5DC94B09/5DCEA5B2" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCEA5B2" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 7650 50  0001 C CNN
+F 1 "GND" H 3205 7727 50  0000 C CNN
+F 2 "" H 3200 7900 50  0001 C CNN
+F 3 "" H 3200 7900 50  0001 C CNN
+	1    3200 7900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 7900
+Wire Wire Line
+	2400 7150 850  7150
+Text Label 900  7150 0    49   ~ 0
+PUMP_VALVE_CLOSED
+Connection ~ 2400 7150
+Text HLabel 850  7150 0    49   Input ~ 0
+59
+$Comp
+L Relay_Partials:Coil_Vertical RLC?
+U 1 1 5DCEA5BD
+P 3200 8450
+F 0 "RLC?" H 2900 8400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 8282 100 0001 L CNN
+F 2 "" H 3200 8450 100 0001 C CNN
+F 3 "" H 3200 8450 100 0001 C CNN
+	1    3200 8450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V?
+U 1 1 5DCEA5C3
+P 2700 8350
+F 0 "V?" H 2803 8350 50  0000 L CNN
+F 1 "Varistor" H 2803 8305 50  0001 L CNN
+F 2 "" V 2630 8350 50  0001 C CNN
+F 3 "" H 2700 8350 50  0001 C CNN
+	1    2700 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5DCEA5C9
+P 2400 8350
+F 0 "R?" H 2470 8350 50  0000 L CNN
+F 1 "R" H 2470 8305 50  0001 L CNN
+F 2 "" V 2330 8350 50  0001 C CNN
+F 3 "" H 2400 8350 50  0001 C CNN
+	1    2400 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D?
+U 1 1 5DCEA5CF
+P 2400 8700
+F 0 "D?" V 2393 8583 50  0000 R CNN
+F 1 "LED" V 2348 8583 50  0001 R CNN
+F 2 "" H 2400 8700 50  0001 C CNN
+F 3 "" H 2400 8700 50  0001 C CNN
+	1    2400 8700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 8200 2400 8150
+Wire Wire Line
+	2400 8150 2700 8150
+Wire Wire Line
+	2700 8150 2700 8200
+Wire Wire Line
+	2700 8150 3200 8150
+Wire Wire Line
+	3200 8150 3200 8350
+Connection ~ 2700 8150
+Wire Wire Line
+	2400 8500 2400 8550
+Wire Wire Line
+	3200 8750 3200 8900
+Wire Wire Line
+	3200 8900 2700 8900
+Wire Wire Line
+	2400 8900 2400 8850
+Wire Wire Line
+	2700 8500 2700 8900
+Connection ~ 2700 8900
+Wire Wire Line
+	2700 8900 2400 8900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCEA5E2
+P 3200 8900
+AR Path="/5DC94B09/5DCEA5E2" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCEA5E2" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 8650 50  0001 C CNN
+F 1 "GND" H 3205 8727 50  0000 C CNN
+F 2 "" H 3200 8900 50  0001 C CNN
+F 3 "" H 3200 8900 50  0001 C CNN
+	1    3200 8900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 8900
+Wire Wire Line
+	2400 8150 850  8150
+Text Label 900  8150 0    49   ~ 0
+HIVAC_VALVE_CLOSED
+Connection ~ 2400 8150
+Text HLabel 850  8150 0    49   Input ~ 0
+60
+$Comp
+L Relay_Partials:Coil_Vertical RLC?
+U 1 1 5DCEA5ED
+P 3200 9450
+F 0 "RLC?" H 2900 9400 49  0000 L CNN
+F 1 "Coil_Vertical" H 3528 9282 100 0001 L CNN
+F 2 "" H 3200 9450 100 0001 C CNN
+F 3 "" H 3200 9450 100 0001 C CNN
+	1    3200 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Varistor V?
+U 1 1 5DCEA5F3
+P 2700 9350
+F 0 "V?" H 2803 9350 50  0000 L CNN
+F 1 "Varistor" H 2803 9305 50  0001 L CNN
+F 2 "" V 2630 9350 50  0001 C CNN
+F 3 "" H 2700 9350 50  0001 C CNN
+	1    2700 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5DCEA5F9
+P 2400 9350
+F 0 "R?" H 2470 9350 50  0000 L CNN
+F 1 "R" H 2470 9305 50  0001 L CNN
+F 2 "" V 2330 9350 50  0001 C CNN
+F 3 "" H 2400 9350 50  0001 C CNN
+	1    2400 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D?
+U 1 1 5DCEA5FF
+P 2400 9700
+F 0 "D?" V 2393 9583 50  0000 R CNN
+F 1 "LED" V 2348 9583 50  0001 R CNN
+F 2 "" H 2400 9700 50  0001 C CNN
+F 3 "" H 2400 9700 50  0001 C CNN
+	1    2400 9700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 9200 2400 9150
+Wire Wire Line
+	2400 9150 2700 9150
+Wire Wire Line
+	2700 9150 2700 9200
+Wire Wire Line
+	2700 9150 3200 9150
+Wire Wire Line
+	3200 9150 3200 9350
+Connection ~ 2700 9150
+Wire Wire Line
+	2400 9500 2400 9550
+Wire Wire Line
+	3200 9750 3200 9900
+Wire Wire Line
+	3200 9900 2700 9900
+Wire Wire Line
+	2400 9900 2400 9850
+Wire Wire Line
+	2700 9500 2700 9900
+Connection ~ 2700 9900
+Wire Wire Line
+	2700 9900 2400 9900
+$Comp
+L power:GND EXT_0V?
+U 1 1 5DCEA612
+P 3200 9900
+AR Path="/5DC94B09/5DCEA612" Ref="EXT_0V?"  Part="1" 
+AR Path="/5DCF32FF/5DCEA612" Ref="EXT_0V?"  Part="1" 
+F 0 "EXT_0V?" H 3200 9650 50  0001 C CNN
+F 1 "GND" H 3205 9727 50  0000 C CNN
+F 2 "" H 3200 9900 50  0001 C CNN
+F 3 "" H 3200 9900 50  0001 C CNN
+	1    3200 9900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 9900
+Wire Wire Line
+	2400 9150 850  9150
+Connection ~ 2400 9150
+Text HLabel 850  9150 0    49   Input ~ 0
+61
+Text Label 900  9150 0    49   ~ 0
+AIR_GOOD
+$EndSCHEMATC

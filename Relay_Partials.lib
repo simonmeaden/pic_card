@@ -1,0 +1,69 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Coil_Vertical
+#
+DEF Coil_Vertical RL 0 40 Y Y 1 F N
+F0 "RL" 150 100 100 H V C CNN
+F1 "Coil_Vertical" 520 -250 100 H V C CNN
+F2 "" 0 0 100 H I C CNN
+F3 "" 0 0 100 H I C CNN
+DRAW
+S -300 0 300 -200 0 1 0 N
+P 2 0 1 0 -100 -200 100 0 N
+X ~ + 0 100 100 D 50 50 1 1 I
+X ~ - 0 -300 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Contact_CO
+#
+DEF Contact_CO SW 0 0 Y N 1 F N
+F0 "SW" 0 170 50 H V C CNN
+F1 "Contact_CO" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 -100 20 0 0 0 N
+C 80 100 20 0 1 0 N
+P 2 0 1 0 -60 10 65 90 N
+X A 1 200 100 100 L 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 P
+X C 3 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Contact_NC
+#
+DEF Contact_NC SW 0 0 Y N 1 F N
+F0 "SW" 0 125 50 H V C CNN
+F1 "Contact_NC" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 0 20 0 0 0 N
+P 2 0 0 0 -60 10 80 20 N
+X A 1 -200 0 100 R 50 50 1 1 I
+X B 2 200 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Contact_NO
+#
+DEF Contact_NO SW 0 0 Y N 1 F N
+F0 "SW" 0 125 50 H V C CNN
+F1 "Contact_NO" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 0 20 0 0 0 N
+P 2 0 0 0 -60 10 60 70 N
+X A 1 -200 0 100 R 50 50 1 1 I
+X B 2 200 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
