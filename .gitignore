@@ -4,6 +4,9 @@
 # CPL data generated from PCB
 *.pos
 
+# Datasheets
+/parts/
+
 # KiCAD backup
 *.bak
 *.bck
